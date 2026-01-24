@@ -79,7 +79,7 @@ export default function FeatureGrid() {
                                 <div className="space-y-4 mb-8">
                                     <div>
                                         <p className="text-xs text-gray-500 font-bold uppercase mb-1">Contact us :</p>
-                                        <p className="text-white font-bold">+(123) 456-789</p>
+                                        <p className="text-white font-bold">971 42866807</p>
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 font-bold uppercase mb-1">Email us :</p>

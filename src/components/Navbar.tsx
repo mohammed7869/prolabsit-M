@@ -51,7 +51,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-3">
                         <div className="text-right hidden xl:block">
                             <p className="text-xs text-gray-400 font-medium mb-0.5">Call Us at:</p>
-                            <p className="text-white font-bold tracking-wide">+(123) 456-789</p>
+                            <p className="text-white font-bold tracking-wide">971 42866807</p>
                         </div>
                         <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-[#AEE2FF]">
                             <Phone className="w-5 h-5" />
