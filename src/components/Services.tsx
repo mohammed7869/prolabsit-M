@@ -67,7 +67,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 bg-[#0b0e13] overflow-hidden">
+        <section id="services" className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Header Layout */}
@@ -75,7 +75,7 @@ export default function Services() {
                     {/* Badge Column (Left) */}
                     <div className="lg:col-span-4">
                         <Reveal>
-                            <span className="inline-block py-2 px-4 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-semibold tracking-wide uppercase">
+                            <span className="inline-block py-2 px-4 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 text-[#2FA9DC] text-xs font-semibold tracking-wide uppercase">
                                 • Our Core Services
                             </span>
                         </Reveal>
@@ -83,7 +83,7 @@ export default function Services() {
                     {/* Title Column (Right) */}
                     <div className="lg:col-span-8">
                         <Reveal direction="up">
-                            <h2 className="text-3xl md:text-5xl font-bold text-white leading-[1.2]">
+                            <h2 className="text-3xl md:text-5xl font-bold text-[#2FA9DC] leading-[1.2]">
                                 Comprehensive, scalable it services designed to empower growing businesses
                             </h2>
                         </Reveal>
@@ -93,8 +93,8 @@ export default function Services() {
                 <div className="flex flex-col xl:flex-row gap-6">
                     {/* Auto Scroller Loop (Remaining Portion) */}
                     <div className="flex-1 overflow-hidden relative">
-                         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0b0e13] to-transparent z-10 pointer-events-none" />
-                         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0b0e13] to-transparent z-10 pointer-events-none" />
+                         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
                         
                         <div className="flex h-full">
                             <motion.div
@@ -110,21 +110,21 @@ export default function Services() {
                                 {[...services, ...services].map((service, index) => (
                                     <div key={index} className="w-[350px] flex-shrink-0 h-full">
                                         <GlowingCard className="h-full">
-                                            <div className="group bg-[#1a1f29] rounded-[4px] p-8 h-full flex flex-col justify-between transition-all border border-white/5 hover:border-[#AEE2FF]/30">
+                                            <div className="group bg-gray-50 rounded-[4px] p-8 h-full flex flex-col justify-between transition-all border border-[#2FA9DC]/10 hover:border-[#2FA9DC]/30">
                                                 <div>
                                                     {/* Icon */}
-                                                    <div className="mb-8 text-white group-hover:text-[#AEE2FF] transition-colors group-hover:scale-110 duration-300 origin-left">
+                                                    <div className="mb-8 text-[#2FA9DC] group-hover:text-[#1e7ba8] transition-colors group-hover:scale-110 duration-300 origin-left">
                                                         <service.icon className="w-12 h-12 stroke-[1.5]" />
                                                     </div>
 
-                                                    <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
-                                                    <p className="text-gray-400 text-lg leading-relaxed mb-8 line-clamp-3">
+                                                    <h3 className="text-xl font-bold text-[#2FA9DC] mb-4">{service.title}</h3>
+                                                    <p className="text-gray-600 text-lg leading-relaxed mb-8 line-clamp-3">
                                                         {service.description}
                                                     </p>
                                                 </div>
 
-                                                <div className="pt-6 border-t border-white/10">
-                                                    <a href="#" className="flex items-center gap-2 text-white font-bold text-sm hover:text-[#AEE2FF] transition-colors group-hover:gap-3">
+                                                <div className="pt-6 border-t border-[#2FA9DC]/10">
+                                                    <a href="#" className="flex items-center gap-2 text-[#2FA9DC] font-bold text-sm hover:text-[#1e7ba8] transition-colors group-hover:gap-3">
                                                         Learn More <ArrowUpRight className="w-4 h-4" />
                                                     </a>
                                                 </div>
@@ -138,7 +138,7 @@ export default function Services() {
 
                     {/* CTA Card (Preserved) */}
                     <div className="w-full xl:max-w-[350px] flex-shrink-0">
-                        <div className="relative rounded-[4px] overflow-hidden h-full min-h-[420px] group bg-[#1a1f29]">
+                        <div className="relative rounded-[4px] overflow-hidden h-full min-h-[420px] group bg-gray-50">
                             <Image
                                 src="https://demo.awaikenthemes.com/codeio/it-solutions-dark/wp-content/uploads/2025/08/service-cta-img.jpg"
                                 alt="Support Team"
@@ -149,10 +149,10 @@ export default function Services() {
 
                             <div className="absolute bottom-8 left-8 right-8">
                                 <h3 className="text-xl font-bold text-white mb-2 leading-tight">Need Any Help? We're Here To Help You!</h3>
-                                <p className="text-gray-300 text-xs mb-6 opacity-90">
+                                <p className="text-gray-200 text-xs mb-6 opacity-90">
                                     Comprehensive protection from evolving threats with risk assessments.
                                 </p>
-                                <button className="cursor-pointer bg-[#AEE2FF] text-[#0b0e13] px-6 py-3 rounded-md font-bold text-sm flex items-center gap-2 hover:bg-white transition-colors">
+                                <button className="cursor-pointer bg-[#2FA9DC] text-white px-6 py-3 rounded-md font-bold text-sm flex items-center gap-2 hover:bg-[#1e7ba8] transition-colors">
                                     Contact Us <ArrowUpRight className="w-4 h-4" />
                                 </button>
                             </div>

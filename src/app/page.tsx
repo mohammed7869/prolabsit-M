@@ -21,7 +21,7 @@ import { Marquee } from "@/components/DesignElements";
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-[#0b0e13]">
+        <main className="min-h-screen bg-white">
             <Navbar />
             <Hero />
             <Stats />

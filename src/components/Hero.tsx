@@ -33,12 +33,12 @@ export default function Hero() {
     const [isImageHovered, setIsImageHovered] = useState(false);
 
     return (
-        <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-[#0b0e13]">
+        <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white">
             {/* Background Gradients/Glows */}
             <motion.div
                 animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#AEE2FF]/5 blur-[120px] rounded-full pointer-events-none"
+                className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#2FA9DC]/5 blur-[120px] rounded-full pointer-events-none"
             />
             <motion.div
                 animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
@@ -50,7 +50,7 @@ export default function Hero() {
             {[...Array(6)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute w-1 h-1 bg-[#AEE2FF]/30 rounded-full pointer-events-none"
+                    className="absolute w-1 h-1 bg-[#2FA9DC]/30 rounded-full pointer-events-none"
                     style={{
                         left: `${15 + i * 15}%`,
                         top: `${20 + (i % 3) * 25}%`,
@@ -83,7 +83,7 @@ export default function Hero() {
                             }}
                         >
                             {/* Badge */}
-                            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 w-fit">
+                            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 mb-8 w-fit">
                                 <Image
                                     src="https://demo.awaikenthemes.com/codeio/it-solutions-dark/wp-content/uploads/2025/08/asterik-stare.svg"
                                     alt="icon"
@@ -91,21 +91,21 @@ export default function Hero() {
                                     height={12}
                                     className="w-3 h-3"
                                 />
-                                <span className="text-white text-sm font-medium tracking-wide">
+                                <span className="text-[#2FA9DC] text-sm font-medium tracking-wide">
                                     Smarter IT. Stronger Business.
                                 </span>
                             </motion.div>
 
                             {/* Heading */}
-                            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-[68px] font-bold text-white leading-[1.1] mb-6 block">
+                            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-[68px] font-bold text-[#2FA9DC] leading-[1.1] mb-6 block">
                                Professional Managed Security and IT Support Services Provider <br className="hidden lg:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[#AEE2FF]">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2FA9DC] to-[#1e7ba8]">
                                     {/* <TypewriterText text="scalable it solutions" delay={1} /> */}
                                 </span>
                             </motion.h1>
 
                             {/* Description */}
-                            <motion.p variants={fadeUp} className="text-lg text-gray-400 mb-10 max-w-lg leading-relaxed">
+                            <motion.p variants={fadeUp} className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
 Professional Labs aim is to simplify that complexity. <br />
                             </motion.p>
 
@@ -120,7 +120,7 @@ Professional Labs aim is to simplify that complexity. <br />
                             </motion.div>
 
                             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-                                <MagneticButton className="cursor-pointer bg-[#AEE2FF] hover:bg-[#90d5ff] text-[#0b0e13] px-9 py-4 rounded-full font-bold transition-all flex items-center gap-2 group shadow-[0_0_20px_rgba(174,226,255,0.3)] hover:shadow-[0_0_40px_rgba(174,226,255,0.6)]">
+                                <MagneticButton className="cursor-pointer bg-[#2FA9DC] hover:bg-[#1e7ba8] text-white px-9 py-4 rounded-full font-bold transition-all flex items-center gap-2 group shadow-[0_0_20px_rgba(47,169,220,0.3)] hover:shadow-[0_0_40px_rgba(47,169,220,0.6)]">
                                      Get a Free Consultation
                                     <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                 </MagneticButton>
@@ -164,7 +164,7 @@ Professional Labs aim is to simplify that complexity. <br />
                                     onMouseLeave={() => setIsImageHovered(false)}
                                 >
                                     {/* Blue Overlay on Hover */}
-                                    <div className="absolute inset-0 bg-[#AEE2FF] opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10 pointer-events-none" />
+                                    <div className="absolute inset-0 bg-[#2FA9DC] opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10 pointer-events-none" />
 
                                     {/* Water Wave Ripple Effect */}
                                     <WaveOverlay isHovered={isImageHovered} />

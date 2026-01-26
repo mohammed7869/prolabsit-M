@@ -33,7 +33,7 @@ const features = [
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-24 bg-[#0b0e13]">
+        <section className="py-24 bg-white">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Header Layout */}
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                     {/* Badge Column (Left) */}
                     <div className="lg:col-span-4">
                         <Reveal>
-                            <span className="inline-block py-2 px-4 rounded-full bg-white/5 border border-white/10 text-gray-300 text-xs font-semibold tracking-wide uppercase">
+                            <span className="inline-block py-2 px-4 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 text-[#2FA9DC] text-xs font-semibold tracking-wide uppercase">
                                 • Why Choose Us
                             </span>
                         </Reveal>
@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
                     {/* Title Column (Right) */}
                     <div className="lg:col-span-8">
                         <Reveal direction="up">
-                            <h2 className="text-3xl md:text-5xl font-bold text-white leading-[1.2]">
+                            <h2 className="text-3xl md:text-5xl font-bold text-[#2FA9DC] leading-[1.2]">
                                 From consultation to implementation – we deliver end to end it excellence that supports
                             </h2>
                         </Reveal>
@@ -61,22 +61,22 @@ export default function WhyChooseUs() {
                     {features.map((feature, index) => (
                         <Reveal key={index} direction="up" delay={index * 0.1}>
                             <GlowingCard className="h-full">
-                                <div className="group bg-[#11141b] rounded-[4px] p-6 h-full flex flex-col justify-between transition-all border border-white/5">
+                                <div className="group bg-gray-50 rounded-[4px] p-6 h-full flex flex-col justify-between transition-all border border-[#2FA9DC]/10">
                                     <div>
                                         {/* Icon */}
-                                        <div className="mb-6 text-white group-hover:text-[#AEE2FF] transition-colors">
+                                        <div className="mb-6 text-[#2FA9DC] group-hover:text-[#1e7ba8] transition-colors">
                                             <feature.icon className="w-10 h-10 stroke-[1] opacity-90" />
                                         </div>
 
-                                        <h3 className="text-lg font-bold text-white mb-4 min-h-[50px] leading-tight">{feature.title}</h3>
+                                        <h3 className="text-lg font-bold text-[#2FA9DC] mb-4 min-h-[50px] leading-tight">{feature.title}</h3>
 
-                                        <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                                        <p className="text-gray-600 text-sm leading-relaxed mb-6">
                                             {feature.description}
                                         </p>
                                     </div>
 
-                                    <div className="pt-6 border-t border-white/10">
-                                        <a href="#" className="flex items-center gap-2 text-white font-bold text-sm hover:text-[#AEE2FF] transition-colors group-hover:gap-3">
+                                    <div className="pt-6 border-t border-[#2FA9DC]/10">
+                                        <a href="#" className="flex items-center gap-2 text-[#2FA9DC] font-bold text-sm hover:text-[#1e7ba8] transition-colors group-hover:gap-3">
                                             Learn More <ArrowUpRight className="w-4 h-4" />
                                         </a>
                                     </div>

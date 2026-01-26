@@ -37,7 +37,7 @@ const faqs = [
 
 export default function FAQ() {
     return (
-        <section className="py-24 bg-[#0b0e13]">
+        <section className="py-24 bg-white">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
 
@@ -58,21 +58,21 @@ export default function FAQ() {
                                 {/* Avatars */}
                                 <div className="flex items-center -space-x-3">
                                     {[1, 2, 3, 4].map((i) => (
-                                        <div key={i} className="w-12 h-12 rounded-full border-2 border-[#0b0e13] bg-gray-700 overflow-hidden">
+                                        <div key={i} className="w-12 h-12 rounded-full border-2 border-white bg-gray-300 overflow-hidden">
                                             <img src={`https://i.pravatar.cc/100?img=${i + 30}`} alt="Client" className="w-full h-full object-cover" />
                                         </div>
                                     ))}
-                                    <div className="w-12 h-12 rounded-full border-2 border-[#0b0e13] bg-[#AEE2FF] flex items-center justify-center text-[#0b0e13] text-xs font-bold">
+                                    <div className="w-12 h-12 rounded-full border-2 border-white bg-[#2FA9DC] flex items-center justify-center text-white text-xs font-bold">
                                         15K
                                     </div>
                                 </div>
-                                <div className="text-white">
+                                <div className="text-[#2FA9DC]">
                                     <div className="font-bold">99% Client</div>
-                                    <div className="text-sm text-gray-400">Satisfaction Rate</div>
+                                    <div className="text-sm text-gray-600">Satisfaction Rate</div>
                                 </div>
                             </div>
 
-                            <button className="bg-[#AEE2FF] hover:bg-[#90d5ff] text-[#0b0e13] px-8 py-4 rounded-[4px] font-bold transition-all flex items-center gap-2 group">
+                            <button className="bg-[#2FA9DC] hover:bg-[#1e7ba8] text-white px-8 py-4 rounded-[4px] font-bold transition-all flex items-center gap-2 group">
                                 View All Faqs
                                 <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
@@ -84,9 +84,9 @@ export default function FAQ() {
                         <Reveal direction="up" delay={0.2}>
                             <RadixAccordion.Root type="single" defaultValue="item-0" collapsible className="space-y-4">
                                 {faqs.map((faq, index) => (
-                                    <RadixAccordion.Item key={index} value={`item-${index}`} className="border-b border-white/10 pb-4">
+                                    <RadixAccordion.Item key={index} value={`item-${index}`} className="border-b border-[#2FA9DC]/10 pb-4">
                                         <RadixAccordion.Header>
-                                            <RadixAccordion.Trigger className="flex w-full items-center justify-between py-4 text-left font-bold text-white hover:text-[#AEE2FF] transition-all group data-[state=open]:text-[#AEE2FF]">
+                                            <RadixAccordion.Trigger className="flex w-full items-center justify-between py-4 text-left font-bold text-[#2FA9DC] hover:text-[#1e7ba8] transition-all group data-[state=open]:text-[#1e7ba8]">
                                                 <span className="text-lg">{faq.question}</span>
                                                 <div className="shrink-0">
                                                     <Plus className="h-5 w-5 group-data-[state=open]:hidden" />
@@ -95,13 +95,13 @@ export default function FAQ() {
                                             </RadixAccordion.Trigger>
                                         </RadixAccordion.Header>
                                         <RadixAccordion.Content className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                                            <div className="pb-4 pt-2 text-gray-400 leading-relaxed">
+                                            <div className="pb-4 pt-2 text-gray-600 leading-relaxed">
                                                 {faq.answer}
                                                 {faq.points.length > 0 && (
                                                     <ul className="mt-4 space-y-2">
                                                         {faq.points.map((point, i) => (
                                                             <li key={i} className="flex items-start gap-2">
-                                                                <Check className="w-4 h-4 text-[#AEE2FF] mt-0.5 shrink-0" />
+                                                                <Check className="w-4 h-4 text-[#2FA9DC] mt-0.5 shrink-0" />
                                                                 <span>{point}</span>
                                                             </li>
                                                         ))}
