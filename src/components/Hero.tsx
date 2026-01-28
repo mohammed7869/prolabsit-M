@@ -33,37 +33,37 @@ export default function Hero() {
     const [isImageHovered, setIsImageHovered] = useState(false);
 
     return (
-        <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white">
+        <section id="home" className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
             {/* Background Gradients/Glows */}
             <motion.div
                 animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-[#2FA9DC]/5 blur-[120px] rounded-full pointer-events-none"
+                className="absolute top-[-20%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-br from-[#2FA9DC]/10 via-[#667eea]/5 to-transparent blur-[120px] rounded-full pointer-events-none"
             />
             <motion.div
                 animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.4, 0.2] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-900/10 blur-[120px] rounded-full pointer-events-none"
+                className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-gradient-to-tr from-[#667eea]/10 via-[#f093fb]/5 to-transparent blur-[120px] rounded-full pointer-events-none"
             />
 
             {/* Floating Particles */}
-            {[...Array(6)].map((_, i) => (
+            {[...Array(8)].map((_, i) => (
                 <motion.div
                     key={i}
-                    className="absolute w-1 h-1 bg-[#2FA9DC]/30 rounded-full pointer-events-none"
+                    className="absolute w-2 h-2 bg-gradient-to-r from-[#2FA9DC] to-[#667eea] rounded-full pointer-events-none opacity-40"
                     style={{
-                        left: `${15 + i * 15}%`,
-                        top: `${20 + (i % 3) * 25}%`,
+                        left: `${10 + i * 12}%`,
+                        top: `${15 + (i % 4) * 20}%`,
                     }}
                     animate={{
-                        y: [0, -30, 0],
-                        opacity: [0.3, 0.8, 0.3],
+                        y: [0, -40, 0],
+                        opacity: [0.2, 0.6, 0.2],
                         scale: [1, 1.5, 1],
                     }}
                     transition={{
-                        duration: 4 + i * 0.5,
+                        duration: 5 + i * 0.5,
                         repeat: Infinity,
-                        delay: i * 0.3,
+                        delay: i * 0.4,
                         ease: "easeInOut",
                     }}
                 />
@@ -83,7 +83,7 @@ export default function Hero() {
                             }}
                         >
                             {/* Badge */}
-                            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 mb-8 w-fit">
+                            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-premium mb-8 w-fit animate-border-glow">
                                 <Image
                                     src="https://demo.awaikenthemes.com/codeio/it-solutions-dark/wp-content/uploads/2025/08/asterik-stare.svg"
                                     alt="icon"
@@ -91,22 +91,22 @@ export default function Hero() {
                                     height={12}
                                     className="w-3 h-3"
                                 />
-                                <span className="text-[#2FA9DC] text-sm font-medium tracking-wide">
+                                <span className="text-[#0d1f67] text-sm font-semibold tracking-wide">
                                     Smarter IT. Stronger Business.
                                 </span>
                             </motion.div>
 
                             {/* Heading */}
-                            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-[68px] font-bold text-[#2FA9DC] leading-[1.1] mb-6 block">
-                               Professional Managed Security and IT Support Services Provider <br className="hidden lg:block" />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2FA9DC] to-[#1e7ba8]">
+                            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-[68px] font-bold text-[#0d1f67] leading-[1.1] mb-6 block text-shadow-sm">
+                                Professional Managed Security and IT Support Services Provider <br className="hidden lg:block" />
+                                <span className="gradient-text-premium">
                                     {/* <TypewriterText text="scalable it solutions" delay={1} /> */}
                                 </span>
                             </motion.h1>
 
                             {/* Description */}
-                            <motion.p variants={fadeUp} className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
-Professional Labs aim is to simplify that complexity. <br />
+                            <motion.p variants={fadeUp} className="text-lg text-[#4a5568] mb-10 max-w-lg leading-relaxed">
+                                Professional Labs aim is to simplify that complexity. <br />
                             </motion.p>
 
                             <motion.div variants={fadeUp} className="mb-10">
@@ -120,11 +120,11 @@ Professional Labs aim is to simplify that complexity. <br />
                             </motion.div>
 
                             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-                                <MagneticButton className="cursor-pointer bg-[#2FA9DC] hover:bg-[#1e7ba8] text-white px-9 py-4 rounded-full font-bold transition-all flex items-center gap-2 group shadow-[0_0_20px_rgba(47,169,220,0.3)] hover:shadow-[0_0_40px_rgba(47,169,220,0.6)]">
-                                     Get a Free Consultation
-                                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <MagneticButton className="cursor-pointer bg-gradient-to-r from-[#2FA9DC] via-[#1e7ba8] to-[#0d4f6e] hover:from-[#1e7ba8] hover:via-[#2FA9DC] hover:to-[#667eea] text-white px-9 py-4 rounded-full font-bold transition-all duration-500 flex items-center gap-2 group shadow-[0_4px_30px_rgba(47,169,220,0.4)] hover:shadow-[0_8px_50px_rgba(47,169,220,0.6)] btn-shine">
+                                    Get a Free Consultation
+                                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                                 </MagneticButton>
-                                
+
                             </motion.div>
                         </motion.div>
                     </div>
@@ -183,7 +183,7 @@ Professional Labs aim is to simplify that complexity. <br />
                                     <RotatingText />
                                 </div>
 
-                                
+
                             </motion.div>
                         </motion.div>
                     </motion.div>

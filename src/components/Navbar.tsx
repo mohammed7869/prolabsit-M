@@ -18,7 +18,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 border-b border-[#2FA9DC]/10 ${scrolled ? "bg-white/90 backdrop-blur-md py-0" : "bg-transparent py-2 lg:py-4"}`}>
+        <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? "glass-premium shadow-[0_4px_30px_rgba(13,31,103,0.08)] py-0" : "bg-transparent py-2 lg:py-4"}`}>
             <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 group">
@@ -37,10 +37,10 @@ export default function Navbar() {
                         <Link
                             key={item}
                             href={`#${item.toLowerCase().replace(" ", "-")}`}
-                            className="text-sm font-medium text-[#2FA9DC] hover:text-[#1e7ba8] transition-colors relative group py-2"
+                            className="text-sm font-semibold text-[#0d1f67] hover:text-[#2FA9DC] transition-all duration-300 relative group py-2"
                         >
                             {item}
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2FA9DC] to-[#1e7ba8] group-hover:w-full transition-all duration-300" />
+                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2FA9DC] to-[#667eea] group-hover:w-full transition-all duration-300" />
                         </Link>
                     ))}
                 </div>
@@ -50,23 +50,23 @@ export default function Navbar() {
                     {/* Call Us */}
                     <div className="flex items-center gap-3">
                         <div className="text-right hidden xl:block">
-                            <p className="text-xs text-gray-600 font-medium mb-0.5">Call Us at:</p>
-                            <p className="text-[#2FA9DC] font-bold tracking-wide">971 42866807</p>
+                            <p className="text-xs text-[#718096] font-medium mb-0.5">Call Us at:</p>
+                            <p className="text-[#0d1f67] font-bold tracking-wide">971 42866807</p>
                         </div>
-                        <div className="w-10 h-10 rounded-full bg-[#2FA9DC]/10 flex items-center justify-center border border-[#2FA9DC]/20 text-[#2FA9DC]">
+                        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2FA9DC]/20 to-[#667eea]/10 flex items-center justify-center border border-[#2FA9DC]/30 text-[#2FA9DC] group-hover:scale-110 transition-transform duration-300">
                             <Phone className="w-5 h-5" />
                         </div>
                     </div>
 
                     {/* CTA Button */}
-                    <MagneticButton className="bg-[#2FA9DC] hover:bg-[#1e7ba8] text-white px-6 py-3 rounded-full font-bold transition-all flex items-center gap-2 group shadow-[0_0_20px_rgba(47,169,220,0.3)] hover:shadow-[0_0_35px_rgba(47,169,220,0.5)]">
+                    <MagneticButton className="bg-gradient-to-r from-[#2FA9DC] via-[#1e7ba8] to-[#0d4f6e] hover:from-[#1e7ba8] hover:via-[#2FA9DC] hover:to-[#667eea] text-white px-6 py-3 rounded-full font-bold transition-all duration-500 flex items-center gap-2 group shadow-[0_4px_25px_rgba(47,169,220,0.35)] hover:shadow-[0_6px_40px_rgba(47,169,220,0.5)] btn-shine">
                         Get a Free Consultation
-                        <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform" />
+                        <ArrowUpRight className="w-5 h-5 group-hover:rotate-45 transition-transform duration-300" />
                     </MagneticButton>
                 </div>
 
                 {/* Mobile Menu Toggle */}
-                <button className="lg:hidden text-[#2FA9DC] bg-[#2FA9DC]/10 p-2 rounded-lg border border-[#2FA9DC]/20">
+                <button className="lg:hidden text-[#0d1f67] bg-gradient-to-br from-[#2FA9DC]/10 to-[#667eea]/10 p-2.5 rounded-xl border border-[#2FA9DC]/20 hover:border-[#2FA9DC]/40 transition-all duration-300">
                     <Menu className="w-6 h-6" />
                 </button>
             </div>

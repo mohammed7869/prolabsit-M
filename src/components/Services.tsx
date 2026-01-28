@@ -1,16 +1,16 @@
 "use client";
 import { Reveal } from "@/components/Reveal";
 import { GlowingCard } from "@/components/GlowingCard";
-import { 
-    ArrowUpRight, 
-    ShieldCheck, 
-    Cloud, 
-    Mail, 
-    Lock, 
-    Shield, 
-    Monitor, 
-    Headphones, 
-    Network, 
+import {
+    ArrowUpRight,
+    ShieldCheck,
+    Cloud,
+    Mail,
+    Lock,
+    Shield,
+    Monitor,
+    Headphones,
+    Network,
     Briefcase,
     ArrowRight
 } from "lucide-react";
@@ -67,7 +67,7 @@ const services = [
 
 export default function Services() {
     return (
-        <section id="services" className="py-24 bg-white overflow-hidden">
+        <section id="services" className="py-24 overflow-hidden relative">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Header Layout */}
@@ -75,7 +75,7 @@ export default function Services() {
                     {/* Badge Column (Left) */}
                     <div className="lg:col-span-4">
                         <Reveal>
-                            <span className="inline-block py-2 px-4 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 text-[#2FA9DC] text-xs font-semibold tracking-wide uppercase">
+                            <span className="inline-block py-2.5 px-5 rounded-full glass-premium text-[#0d1f67] text-xs font-bold tracking-wider uppercase animate-border-glow">
                                 • Our Core Services
                             </span>
                         </Reveal>
@@ -83,7 +83,7 @@ export default function Services() {
                     {/* Title Column (Right) */}
                     <div className="lg:col-span-8">
                         <Reveal direction="up">
-                            <h2 className="text-3xl md:text-5xl font-bold text-[#2FA9DC] leading-[1.2]">
+                            <h2 className="text-3xl md:text-5xl font-bold text-[#0d1f67] leading-[1.2] text-shadow-sm">
                                 Comprehensive, scalable it services designed to empower growing businesses
                             </h2>
                         </Reveal>
@@ -93,39 +93,39 @@ export default function Services() {
                 <div className="flex flex-col xl:flex-row gap-6">
                     {/* Auto Scroller Loop (Remaining Portion) */}
                     <div className="flex-1 overflow-hidden relative">
-                         <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-                         <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-                        
+                        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+                        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
                         <div className="flex h-full">
                             <motion.div
                                 className="flex gap-6 pl-6 h-full"
                                 animate={{ x: "-50%" }}
-                                transition={{ 
+                                transition={{
                                     duration: 60,
-                                    ease: "linear", 
-                                    repeat: Infinity 
+                                    ease: "linear",
+                                    repeat: Infinity
                                 }}
                                 style={{ width: "fit-content" }}
                             >
                                 {[...services, ...services].map((service, index) => (
                                     <div key={index} className="w-[350px] flex-shrink-0 h-full">
                                         <GlowingCard className="h-full">
-                                            <div className="group bg-gray-50 rounded-[4px] p-8 h-full flex flex-col justify-between transition-all border border-[#2FA9DC]/10 hover:border-[#2FA9DC]/30">
+                                            <div className="group bg-white/80 backdrop-blur-sm rounded-xl p-8 h-full flex flex-col justify-between transition-all duration-500 border border-[#2FA9DC]/10 hover:border-[#2FA9DC]/40 card-hover shadow-[0_4px_20px_rgba(13,31,103,0.06)] hover:shadow-[0_12px_40px_rgba(47,169,220,0.15)]">
                                                 <div>
                                                     {/* Icon */}
-                                                    <div className="mb-8 text-[#2FA9DC] group-hover:text-[#1e7ba8] transition-colors group-hover:scale-110 duration-300 origin-left">
+                                                    <div className="mb-8 text-[#2FA9DC] group-hover:text-[#667eea] transition-all duration-500 group-hover:scale-110 origin-left">
                                                         <service.icon className="w-12 h-12 stroke-[1.5]" />
                                                     </div>
 
-                                                    <h3 className="text-xl font-bold text-[#2FA9DC] mb-4">{service.title}</h3>
+                                                    <h3 className="text-xl font-bold text-[#0d1f67] mb-4 group-hover:text-[#2FA9DC] transition-colors duration-300">{service.title}</h3>
                                                     <p className="text-gray-600 text-lg leading-relaxed mb-8 line-clamp-3">
                                                         {service.description}
                                                     </p>
                                                 </div>
 
-                                                <div className="pt-6 border-t border-[#2FA9DC]/10">
-                                                    <a href="#" className="flex items-center gap-2 text-[#2FA9DC] font-bold text-sm hover:text-[#1e7ba8] transition-colors group-hover:gap-3">
-                                                        Learn More <ArrowUpRight className="w-4 h-4" />
+                                                <div className="pt-6 border-t border-[#0d1f67]/10">
+                                                    <a href="#" className="flex items-center gap-2 text-[#0d1f67] font-bold text-sm hover:text-[#2FA9DC] transition-all duration-300 group-hover:gap-4">
+                                                        Learn More <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
                                                     </a>
                                                 </div>
                                             </div>
@@ -160,7 +160,7 @@ export default function Services() {
                     </div>
                 </div>
 
-         
+
 
             </div>
         </section>

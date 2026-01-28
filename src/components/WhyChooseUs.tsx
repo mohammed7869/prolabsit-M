@@ -33,7 +33,7 @@ const features = [
 
 export default function WhyChooseUs() {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-24 relative">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Header Layout */}
@@ -41,7 +41,7 @@ export default function WhyChooseUs() {
                     {/* Badge Column (Left) */}
                     <div className="lg:col-span-4">
                         <Reveal>
-                            <span className="inline-block py-2 px-4 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 text-[#2FA9DC] text-xs font-semibold tracking-wide uppercase">
+                            <span className="inline-block py-2.5 px-5 rounded-full glass-premium text-[#0d1f67] text-xs font-bold tracking-wider uppercase animate-border-glow">
                                 • Why Choose Us
                             </span>
                         </Reveal>
@@ -49,7 +49,7 @@ export default function WhyChooseUs() {
                     {/* Title Column (Right) */}
                     <div className="lg:col-span-8">
                         <Reveal direction="up">
-                            <h2 className="text-3xl md:text-5xl font-bold text-[#2FA9DC] leading-[1.2]">
+                            <h2 className="text-3xl md:text-5xl font-bold text-[#0d1f67] leading-[1.2] text-shadow-sm">
                                 From consultation to implementation – we deliver end to end it excellence that supports
                             </h2>
                         </Reveal>
@@ -61,44 +61,44 @@ export default function WhyChooseUs() {
                     {features.map((feature, index) => (
                         <Reveal key={index} direction="up" delay={index * 0.1}>
                             <GlowingCard className="h-full">
-                                <div className="group bg-gray-50 rounded-[4px] p-6 h-full flex flex-col justify-between transition-all border border-[#2FA9DC]/10">
+                                <div className="group bg-white/80 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col justify-between transition-all duration-500 border border-[#2FA9DC]/10 hover:border-[#2FA9DC]/40 card-hover shadow-[0_4px_20px_rgba(13,31,103,0.06)] hover:shadow-[0_12px_40px_rgba(47,169,220,0.15)]">
                                     <div>
                                         {/* Icon */}
-                                        <div className="mb-6 text-[#2FA9DC] group-hover:text-[#1e7ba8] transition-colors">
-                                            <feature.icon className="w-10 h-10 stroke-[1] opacity-90" />
+                                        <div className="mb-6 text-[#2FA9DC] group-hover:text-[#667eea] transition-all duration-500 group-hover:scale-110 origin-left">
+                                            <feature.icon className="w-10 h-10 stroke-[1.5]" />
                                         </div>
 
-                                        <h3 className="text-lg font-bold text-[#2FA9DC] mb-4 min-h-[50px] leading-tight">{feature.title}</h3>
+                                        <h3 className="text-lg font-bold text-[#0d1f67] mb-4 min-h-[50px] leading-tight group-hover:text-[#2FA9DC] transition-colors duration-300">{feature.title}</h3>
 
-                                        <p className="text-gray-600 text-sm leading-relaxed mb-6">
+                                        <p className="text-[#4a5568] text-sm leading-relaxed mb-6">
                                             {feature.description}
                                         </p>
                                     </div>
 
-                                    <div className="pt-6 border-t border-[#2FA9DC]/10">
-                                        <a href="#" className="flex items-center gap-2 text-[#2FA9DC] font-bold text-sm hover:text-[#1e7ba8] transition-colors group-hover:gap-3">
-                                            Learn More <ArrowUpRight className="w-4 h-4" />
+                                    <div className="pt-6 border-t border-[#0d1f67]/10">
+                                        <a href="#" className="flex items-center gap-2 text-[#0d1f67] font-bold text-sm hover:text-[#2FA9DC] transition-all duration-300 group-hover:gap-4">
+                                            Learn More <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
                                         </a>
                                     </div>
                                 </div>
                             </GlowingCard>
                         </Reveal>
-                        
+
                     ))}
                 </div>
 
                 {/* Bottom Footer Text */}
-                
-               
+
+
 
                 {/* Additional Image Section */}
                 <div className="mt-20 relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden">
-                     <img 
-                        src="/Picture2.png" 
-                        alt="Why Choose Us Illustration" 
+                    <img
+                        src="/Picture2.png"
+                        alt="Why Choose Us Illustration"
                         className="w-full h-full object-cover"
                     />
-                     <div className="absolute inset-0 bg-black/20"></div>
+                    <div className="absolute inset-0 bg-black/20"></div>
                 </div>
 
             </div>

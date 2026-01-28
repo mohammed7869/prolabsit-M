@@ -28,7 +28,7 @@ const blogs = [
 
 export default function Blog() {
     return (
-        <section id="blog" className="py-24 bg-white">
+        <section id="blog" className="py-24 relative">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Header Layout */}
@@ -36,7 +36,7 @@ export default function Blog() {
                     {/* Badge Column (Left) */}
                     <div className="lg:col-span-4">
                         <Reveal>
-                            <span className="inline-block py-2 px-4 rounded-full bg-[#2FA9DC]/10 border border-[#2FA9DC]/20 text-[#2FA9DC] text-xs font-semibold tracking-wide uppercase">
+                            <span className="inline-block py-2.5 px-5 rounded-full glass-premium text-[#0d1f67] text-xs font-bold tracking-wider uppercase animate-border-glow">
                                 • Latest Blogs
                             </span>
                         </Reveal>
@@ -46,7 +46,7 @@ export default function Blog() {
                         <Reveal direction="up">
                             <TextReveal
                                 text="From digital transformation to data security – read what's shaping the future of modern it services"
-                                className="text-3xl md:text-5xl font-bold text-[#2FA9DC] leading-[1.2]"
+                                className="text-3xl md:text-5xl font-bold text-[#0d1f67] leading-[1.2] text-shadow-sm"
                             />
                         </Reveal>
                     </div>
@@ -67,7 +67,7 @@ export default function Blog() {
                                     />
                                     {/* Badge */}
                                     <div className="absolute top-4 left-4 z-10">
-                                        <span className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-[10px] uppercase font-bold text-[#2FA9DC] border border-[#2FA9DC]/20">
+                                        <span className="glass-premium px-3 py-1.5 rounded-full text-[10px] uppercase font-bold text-[#0d1f67]">
                                             {blog.badge}
                                         </span>
                                     </div>
@@ -76,12 +76,12 @@ export default function Blog() {
 
                                 {/* Content */}
                                 <div>
-                                    <h3 className="text-lg font-bold text-[#2FA9DC] mb-4 leading-tight group-hover:text-[#1e7ba8] transition-colors cursor-pointer min-h-[50px]">
+                                    <h3 className="text-lg font-bold text-[#0d1f67] mb-4 leading-tight group-hover:text-[#2FA9DC] transition-colors duration-300 cursor-pointer min-h-[50px]">
                                         {blog.title}
                                     </h3>
 
-                                    <a href="#" className="flex items-center gap-2 text-[#2FA9DC] font-bold text-[10px] uppercase tracking-wider hover:text-[#1e7ba8] transition-colors">
-                                        Learn More <ArrowUpRight className="w-3 h-3" />
+                                    <a href="#" className="flex items-center gap-2 text-[#0d1f67] font-bold text-[10px] uppercase tracking-wider hover:text-[#2FA9DC] transition-all duration-300 group-hover:gap-3">
+                                        Learn More <ArrowUpRight className="w-3 h-3 group-hover:rotate-45 transition-transform duration-300" />
                                     </a>
                                 </div>
                             </div>
